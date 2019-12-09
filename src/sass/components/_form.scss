@@ -1,0 +1,81 @@
+.form {
+  &__input--comment {
+    width: 90%;
+    padding: 0.7rem 0.5rem;
+    border-radius: 1.2rem;
+    outline: none;
+    border: 1px solid $color-grey;
+    font-size: 1rem;
+    resize: none;
+    margin-left: 1rem;
+
+    &:focus {
+      height: 5rem;
+    }
+  }
+
+  &__input--text {
+    width: 100%;
+    outline: none;
+    padding: 0.7rem;
+    border: 1px solid $color-grey-med;
+    font-size: 1rem;
+  }
+
+  &__input--error {
+    border: 1px solid red;
+  }
+
+  &__input--radio {
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+  }
+
+  &__label {
+    margin-bottom: 0.3rem;
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    &--gender {
+      flex-direction: row;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    &--comment,
+    &--gender {
+      flex-direction: row;
+    }
+
+    &--gender {
+      margin-right: 1rem;
+    }
+
+    &--image {
+      margin-top: 0.7rem;
+
+      i {
+        cursor: pointer;
+        color: $color-grey-dark;
+        margin-left: 0.4rem;
+        width: 5%;
+      }
+    }
+  }
+
+  &__image-preview {
+    width: 3rem;
+    height: 3rem;
+    background: blue;
+    margin-bottom: 0.7rem;
+  }
+}

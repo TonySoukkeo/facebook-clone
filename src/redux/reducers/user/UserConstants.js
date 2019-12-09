@@ -1,0 +1,10 @@
+export const GET_USER = `GET_USER`;
+export const GET_FEED_POSTS = "GET_FEED_POSTS";
+export const GET_NOTIFICATIONS = "GET_NOTIFICATIONS";
+export const GET_MESSAGES = "GET_MESSAGES";
+export const GET_CHAT = "GET_CHAT";
+export const MODIFY_POSTS = "MODIFY_POSTS";
+export const MODIFY_POST = "MODIFY_POST";
+export const CHANGE_PRIVACY = "CHANGE_PRIVACY";
+export const DELETE_POST = "DELETE_POST";
+export const GET_FRIEND_REQUESTS = "GET_FRIEND_REQUESTS";

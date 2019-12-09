@@ -1,0 +1,85 @@
+.notifications {
+  &__header {
+    display: flex;
+    align-items: center;
+    background: #fff;
+
+    @include respond(medium) {
+      grid-column: main-content-start / main-content-end;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: auto;
+    }
+  }
+
+  &__content {
+    grid-column: main-content-start / main-content-end;
+  }
+
+  &__header,
+  &__list {
+    border-bottom: 1px solid $color-grey-med;
+  }
+
+  &__list {
+    background: #fff;
+  }
+
+  &__item {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+
+    :first-child {
+      align-self: center;
+    }
+
+    &-content {
+      margin-left: 0.7rem;
+
+      &--text {
+        font-size: 0.9rem;
+      }
+
+      &--timestamp {
+        display: flex;
+        color: $color-grey-med;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__comment-icon,
+  &__like-icon {
+    margin-right: 0.3rem;
+  }
+
+  &__comment-icon {
+    color: $color-green;
+  }
+
+  &__like-icon {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $color-primary-blue-med-3;
+
+    i {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 0.4rem;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.comments {
+  @include respond(medium) {
+    display: grid;
+    grid-template-columns: 8rem [main-post-start]minmax(min-content, 1fr) [main-post-end] 8rem 13rem;
+  }
+}

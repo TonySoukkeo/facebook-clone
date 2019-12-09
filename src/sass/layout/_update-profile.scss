@@ -1,0 +1,38 @@
+.update-profile {
+  @include respond(medium) {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    background: $color-grey-light;
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid $color-grey;
+    color: $color-grey-dark;
+
+    i {
+      margin-right: 0.7rem;
+    }
+  }
+
+  &__form {
+    &-group {
+      background: #fff;
+    }
+
+    &-control {
+      padding: 1rem;
+      label {
+        width: 14rem;
+      }
+    }
+
+    &-input {
+      font-size: 1rem;
+      outline: none;
+      padding: 0.5rem 0.2rem;
+      width: 100%;
+      margin: 0.8rem 0;
+    }
+  }
+}

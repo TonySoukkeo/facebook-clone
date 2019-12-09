@@ -1,0 +1,119 @@
+.post-status {
+  background: #fff;
+  height: 100vh;
+
+  @include respond(medium) {
+    grid-column: main-content-start / main-content-end;
+    height: auto;
+    margin-top: 0.6rem;
+  }
+
+  &__header {
+    display: flex;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid $color-grey-light;
+  }
+
+  &__meta {
+    margin-left: 1rem;
+
+    &-name {
+      color: $color-grey-dark;
+    }
+  }
+
+  &__privacy {
+    display: flex;
+    align-items: center;
+    color: $color-grey-light-2;
+
+    span,
+    p {
+      font-size: 0.8rem;
+    }
+
+    p {
+      margin-left: 0.3rem;
+    }
+
+    &-list {
+      width: 43%;
+      margin-left: auto;
+      text-align: center;
+      list-style-type: none;
+      border: 1px solid $color-grey;
+    }
+
+    &-item:first-child {
+      border-bottom: 1px solid $color-grey;
+    }
+
+    &-item {
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__comment {
+    width: 100%;
+    height: 10rem;
+    resize: none;
+    font-size: 1rem;
+    padding: 0.8rem 0.6rem;
+    outline: none;
+
+    @include respond(medium) {
+      height: 5rem;
+    }
+
+    &-image {
+      position: relative;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 3px;
+      background-color: blue;
+
+      &--icon {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        right: 0.2rem;
+        font-size: 0.7rem;
+        color: $color-red;
+      }
+    }
+  }
+
+  &__form {
+    background: #fff;
+
+    &-list {
+    }
+
+    &-item {
+      display: flex;
+      padding: 0.2rem 0.5rem 0.4rem 0.9rem;
+      border-bottom: 1px solid $color-grey;
+
+      i {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $color-grey-med-2;
+      }
+    }
+
+    &-container {
+      padding: 0.8rem 0.5rem;
+    }
+
+    &-image-input {
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+}

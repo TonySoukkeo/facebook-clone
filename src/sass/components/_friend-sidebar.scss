@@ -1,0 +1,78 @@
+.friend-sidebar {
+  position: fixed;
+  width: 13rem;
+  height: 100vh;
+  border-left: 1px solid $color-grey;
+  background: $color-grey-light-3;
+  right: 0;
+
+  h2 {
+    color: $color-grey-dark;
+  }
+
+  &__no-friends {
+    text-align: center;
+
+    p {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    &--search {
+      text-decoration: none;
+      color: #fff;
+      background: $color-primary-blue-med;
+      padding: 0.4rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__guest {
+    text-align: center;
+    margin-top: 2rem;
+    i {
+      font-size: 4rem;
+      color: $color-primary-blue-med;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+  &__btn {
+    display: block;
+    text-decoration: none;
+    color: $color-primary-blue-dark;
+    text-align: center;
+    position: absolute;
+    bottom: 3.5rem;
+    width: 100%;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem;
+
+    &:hover {
+      background: $color-grey;
+    }
+
+    :first-child {
+      margin-right: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.feed {
+  @include respond(medium) {
+    grid-column: main-content-start / main-content-end;
+  }
+}

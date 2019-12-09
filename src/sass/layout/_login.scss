@@ -1,0 +1,30 @@
+.login {
+  background: $login-background;
+  height: 100vh;
+
+  @include respond(medium) {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__footer {
+    text-align: center;
+
+    &-or {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+      }
+    }
+
+    &-or--line {
+      width: 40%;
+      height: 1px;
+      background: $color-grey;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.profile-friends {
+  @include respond(medium) {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  &__header {
+    background: $color-grey-light;
+    font-weight: bold;
+    color: $color-grey-dark;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  &__btn {
+    cursor: pointer;
+    padding: 0.2rem 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 100%;
+
+    @include respond(medium) {
+      width: 40%;
+      margin-left: auto;
+    }
+
+    &--friends {
+      background: #fff;
+      border: 1px solid $color-grey-dark;
+      color: $color-grey-dark;
+      font-size: 0.8rem;
+      width: 8rem;
+      margin-left: 0.4rem;
+      padding: 0.3rem 0;
+    }
+
+    &--add-friend {
+      background: $color-primary-blue-light-2;
+      color: #fff;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__request {
+    &-sent {
+      text-align: start;
+      padding-left: 0.4rem;
+      margin-top: -0.7rem;
+
+      p {
+        color: $color-grey-med;
+        font-size: 0.8rem;
+      }
+    }
+
+    &-cancel {
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid $color-grey-dark;
+      color: $color-grey-dark;
+      outline: none;
+      padding: 0.5rem 0;
+      width: 4rem !important;
+    }
+  }
+}

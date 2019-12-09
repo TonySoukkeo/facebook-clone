@@ -1,0 +1,156 @@
+.modal {
+  width: 0;
+  height: 0;
+  background: #fff;
+  margin-top: 5rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  &__view-users {
+    position: relative;
+
+    i {
+      cursor: pointer;
+      position: absolute;
+      right: 0.4rem;
+      top: 0.4rem;
+    }
+
+    &-list {
+      margin-top: 3rem;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      cursor: pointer;
+      color: #000;
+      text-decoration: none;
+      transition: background 0.2s ease-in;
+
+      &:hover {
+        background: $color-grey-light;
+      }
+
+      p {
+        margin-left: 1rem;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey;
+      }
+    }
+  }
+
+  &__addfriend-item {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-grey;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+    }
+
+    i {
+      cursor: pointer;
+      margin-left: auto;
+      font-size: 0.9rem;
+      color: $color-green;
+    }
+  }
+
+  &__hidden {
+    display: none;
+  }
+  &--active {
+    position: fixed;
+    top: -2rem;
+    width: 90%;
+    height: 30rem;
+
+    @include respond(medium) {
+      width: 50%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-grey;
+    padding-bottom: 1rem;
+
+    i {
+      color: $color-grey;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 0;
+
+      button {
+        margin-left: auto;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: $color-grey-dark;
+        padding: 0.3rem 0.5rem;
+        background: #fff;
+      }
+    }
+
+    &-user {
+      text-decoration: none;
+      color: #000;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &-likes {
+      position: relative;
+      height: 1.2rem;
+      width: 1.2rem;
+      border-radius: 50%;
+      background: $color-primary-blue-med;
+      margin-right: 0.3rem;
+
+      i {
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.5rem;
+        color: #fff;
+      }
+    }
+  }
+
+  &-overlay {
+    position: absolute;
+
+    &--active {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 100;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}

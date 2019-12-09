@@ -1,0 +1,17 @@
+.edit-post {
+  @include respond(medium) {
+    width: 50%;
+    margin: 2rem auto 0 auto;
+    border: 1px solid $color-grey;
+  }
+
+  &__text {
+    width: 100%;
+    border: none;
+    resize: none;
+    height: 8rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    outline: none;
+  }
+}

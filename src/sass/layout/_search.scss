@@ -1,0 +1,65 @@
+.search {
+  &__input {
+    width: 100%;
+    background: $color-grey-light;
+    padding: 0.6rem 1rem 0.6rem 2.3rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+
+    &-container {
+      padding: 0.5rem;
+      background: #fff;
+      display: flex;
+      position: relative;
+
+      i {
+        display: block;
+        position: absolute;
+        left: 1.2rem;
+        top: 1.2rem;
+      }
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 7px;
+    border: 0.5px solid $color-grey-med;
+
+    &-header {
+      border-bottom: 1px solid $color-grey-light;
+      padding: 0.5rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__list-header,
+  &__item {
+    padding: 0.5rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &-name {
+      margin-left: 1rem;
+      color: #000;
+      text-decoration: none;
+    }
+
+    &-add {
+      cursor: pointer;
+      margin-left: auto;
+
+      &--friend {
+        color: $color-green;
+      }
+    }
+  }
+}

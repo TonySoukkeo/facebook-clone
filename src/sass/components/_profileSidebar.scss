@@ -1,0 +1,95 @@
+.profileSidebar {
+  position: fixed;
+  background: $color-grey-light;
+  width: 15rem;
+  height: 100vh;
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-grey;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+
+    i {
+      color: $color-primary-blue;
+      font-size: 5rem;
+    }
+  }
+
+  &__guest {
+    width: calc(100% - 2rem);
+
+    &-header {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    padding: 0.3rem;
+    transition: all 0.1s ease-in;
+    border: 1px solid transparent;
+
+    &:hover {
+      background: #fff;
+      border: 1px solid $color-grey;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-left: 0.7rem;
+    }
+  }
+
+  &__list {
+    margin-top: 1rem;
+    list-style-type: none;
+  }
+
+  &__item {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    color: #000;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      background: #fff;
+      border: 1px solid $color-grey;
+    }
+
+    &:first-child {
+      background: #fff;
+      font-weight: bold;
+      font-size: 0.9rem;
+      border: 1px solid $color-grey;
+    }
+
+    i {
+      color: $color-primary-blue-light-4;
+      font-size: 1rem;
+      margin-right: 0.3rem;
+    }
+  }
+}

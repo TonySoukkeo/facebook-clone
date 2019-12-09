@@ -1,0 +1,23 @@
+.alert {
+  border-radius: 4px;
+
+  &--success,
+  &--error {
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  &--success {
+    background: $color-primary-blue-light-2;
+  }
+
+  &--error {
+    background: $color-red;
+
+    &-text {
+      color: $color-red;
+    }
+  }
+}

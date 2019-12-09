@@ -1,0 +1,57 @@
+.settings {
+  &__list {
+  }
+
+  &__items {
+    background: #fff;
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+  }
+
+  &__link,
+  &__link:active {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  &__image,
+  &__icon {
+    border-radius: 4px;
+  }
+
+  &__image {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    overflow: hidden;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: $color-grey-med;
+    margin-left: 0.2rem;
+    margin-right: 1.5rem;
+
+    i {
+      font-size: 1rem;
+      color: #fff;
+    }
+  }
+
+  &__text {
+  }
+
+  &__title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: $color-grey-dark;
+    margin: 0.4rem 0 0.4rem 0.6rem;
+  }
+}

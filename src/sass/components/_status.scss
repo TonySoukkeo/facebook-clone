@@ -1,0 +1,26 @@
+.status {
+  background: #fff;
+
+  @include respond(medium) {
+    display: none;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+
+    &-image {
+      margin-right: 1rem;
+    }
+
+    &-input {
+      font-size: 0.9rem;
+      width: 100%;
+      border: 1px solid $color-grey;
+      border-radius: 10rem;
+      padding: 0.3rem 1rem;
+      color: $color-grey-dark;
+      text-decoration: none;
+    }
+  }
+}

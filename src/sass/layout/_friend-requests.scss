@@ -1,0 +1,68 @@
+.friend-requests {
+  &__header {
+    padding: 0.6rem;
+    background: #fff;
+    font-size: 0.6rem;
+    color: rgba(0, 0, 0, 0.8);
+
+    @include respond(medium) {
+      grid-column: main-content-start / main-content-end;
+    }
+  }
+
+  &__content {
+    @include respond(medium) {
+      grid-column: main-content-start / main-content-end;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item,
+  &__header {
+    border-bottom: 1px solid $color-grey;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    background: #fff;
+    padding: 0.3rem;
+
+    &-name {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      margin-left: 0.4rem;
+    }
+
+    &-timestamp {
+      margin-left: auto;
+      font-size: 0.8rem;
+      color: $color-grey-med;
+    }
+  }
+
+  &--title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+
+  &--action {
+    text-align: center;
+    bottom: 1rem;
+    width: 100%;
+
+    :first-child {
+      margin-right: 0.4rem;
+    }
+
+    button {
+      border-radius: 3px;
+      width: 48%;
+    }
+  }
+}

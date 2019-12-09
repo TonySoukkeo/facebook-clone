@@ -1,0 +1,207 @@
+.messaging-display {
+  position: relative;
+  height: calc(100vh - 3rem);
+
+  @include respond(medium) {
+    display: grid;
+    grid-template-columns: 6rem [main-content-start]minmax(min-content, 1fr) [main-content-end] 23rem;
+    grid-template-rows: 3rem;
+  }
+
+  &__sidebar {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 19rem;
+    background: #fff;
+    list-style-type: none;
+    overflow: scroll;
+
+    border-left: 1px solid $color-grey;
+
+    &-header {
+      background: $color-grey-light;
+      padding: 0.8rem;
+      font-weight: bold;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      text-decoration: none;
+      color: #000;
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: $color-primary-blue-light-4;
+      }
+
+      p {
+        margin-left: 0.7rem;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0.8rem 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid $color-grey;
+
+    @include respond(medium) {
+      grid-column: main-content-start / main-content-end;
+      // position: fixed;
+      // right: 0;
+      // width: 13rem;
+      // height: 100%;
+    }
+
+    i {
+      margin-left: auto;
+    }
+
+    i,
+    &-add,
+    &-list {
+      cursor: pointer;
+    }
+
+    &-name {
+      text-decoration: none;
+      color: #000;
+    }
+
+    &-list {
+      position: absolute;
+      list-style-type: none;
+      border: 1px solid $color-grey;
+      right: 0.5rem;
+      top: 2.5rem;
+      font-size: 1rem;
+      z-index: 5;
+    }
+
+    &-item {
+      background: #fff;
+      padding: 0.5rem 0.8rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey;
+      }
+    }
+
+    &-multiple {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  &__list {
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 10rem);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    @include respond(medium) {
+      grid-column: main-content-start / main-content-end;
+      height: calc(100vh - 10rem);
+      border-left: 1px solid $color-grey;
+      border-right: 1px solid $color-grey;
+    }
+  }
+
+  &__item {
+    display: flex;
+    background: #fff;
+    padding: 0.3rem 0 1.5rem 0.5rem;
+
+    &--current-user {
+      justify-content: flex-end;
+    }
+
+    &--friend {
+      justify-content: flex-start;
+    }
+  }
+
+  &__message {
+    position: relative;
+    align-self: center;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    max-width: 90%;
+
+    &--current {
+      background: $color-primary-blue-light-4;
+      color: #fff;
+      margin-right: 0.7rem;
+    }
+
+    &--friend {
+      background: $color-grey-light;
+      color: #000;
+      margin-left: 0.8rem;
+    }
+
+    &--timestamp {
+      &-current,
+      &-friend {
+        position: absolute;
+        font-size: 0.7rem;
+        width: 10rem;
+        color: $color-grey-med;
+        bottom: -1.1rem;
+      }
+
+      &-friend {
+        left: 0.4rem;
+      }
+
+      &-current {
+        right: 0;
+        text-align: right;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    @include respond(medium) {
+      grid-column: main-content-start / main-content-end;
+    }
+  }
+
+  &__input {
+    padding: 0.3rem;
+    width: 85%;
+    border: 1px solid $color-grey;
+    outline: none;
+    resize: none;
+    height: 4rem;
+    font-size: 1rem;
+  }
+
+  &__btn {
+    outline: none;
+    background: white;
+    padding: 1rem;
+    width: 18%;
+    font-size: 1.1rem;
+
+    &--active {
+      cursor: pointer;
+      background: $color-primary-blue-med-5;
+      color: #fff;
+    }
+  }
+}

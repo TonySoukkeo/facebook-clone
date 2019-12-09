@@ -1,0 +1,412 @@
+.posts {
+  background: #fff;
+  margin-top: 0.5rem;
+
+  @include respond(medium) {
+    border-radius: 4px;
+
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    grid-column: main-post-start / main-post-end;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+
+    &-image {
+      margin-right: 1rem;
+    }
+
+    &-name {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    &-timestamp {
+      span {
+        color: $color-grey-med;
+        font-size: 0.8rem;
+      }
+
+      &--privacy {
+        margin-left: 0.4rem;
+      }
+    }
+
+    &-edit {
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    &-list {
+      position: absolute;
+      top: 3rem;
+      right: 0;
+      width: 80%;
+      background: #fff;
+      border-radius: 5px;
+      list-style-type: none;
+      padding: 0.2rem 0.9rem;
+      -webkit-box-shadow: $drop-shadow;
+      box-shadow: $drop-shadow;
+
+      &--arrow {
+        position: absolute;
+        right: 1rem;
+        top: -0.4rem;
+        height: 0.8rem;
+        width: 0.8rem;
+        background: #fff;
+        transform: rotate(45deg);
+      }
+    }
+
+    &-item,
+    &-item:active {
+      display: block;
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 1rem 0;
+      color: #000;
+
+      span {
+        margin-right: 0.8rem;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey;
+      }
+
+      &:last-child {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__body {
+    font-size: 0.9rem;
+  }
+
+  &__content {
+    &-image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__reacts {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+
+    span {
+      color: $color-grey-med;
+    }
+
+    &-icon {
+      margin-right: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 1.2rem;
+      width: 1.2rem;
+      background: $color-primary-blue-light;
+      border-radius: 10rem;
+
+      i {
+        display: block;
+        font-size: 0.5rem;
+        color: #fff;
+      }
+    }
+
+    &-likes {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    &-comments {
+      text-decoration: none;
+      color: #000;
+      margin-left: auto;
+    }
+  }
+
+  &__footer {
+    display: flex;
+
+    &-action {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+      color: $color-grey-dark;
+      text-align: center;
+      width: 50%;
+      font-weight: 700;
+
+      i {
+        font-size: 1.2rem;
+        margin-right: 0.3rem;
+      }
+
+      &--active {
+        color: $color-primary-blue-light;
+      }
+    }
+  }
+
+  &__comments {
+    &--btn {
+      cursor: pointer;
+      background: transparent;
+      outline: none;
+      color: $color-grey;
+      border: 1px solid $color-grey;
+      align-self: center;
+      padding: 0.8rem 0.5rem;
+      font-size: 0.8rem;
+      margin-left: 0.6rem;
+      border-radius: 3px;
+      transition: all 0.3s;
+    }
+
+    &--btn-active {
+      background: $color-primary-blue-light-2;
+      color: white;
+    }
+
+    &-profile-img {
+      height: 3rem;
+      width: 3rem;
+      background: orange;
+      border-radius: 50%;
+      // margin-right: 1rem;
+    }
+
+    &-content-card {
+      display: flex;
+    }
+
+    &-content--comment {
+      position: relative;
+      display: inline-block;
+      max-width: 90%;
+      margin-left: 1rem;
+      background: $color-grey-light;
+      border-radius: 1rem;
+      padding: 0.3rem 0.8rem;
+
+      &-likes {
+        position: absolute;
+        right: -1.8rem;
+        bottom: 0;
+        background: #fff;
+        padding: 0.2rem;
+        border-radius: 1rem;
+        box-shadow: $drop-shadow;
+      }
+    }
+
+    &-content--name {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    &-wrapper {
+      &--footer {
+        display: flex;
+        margin-left: 4rem;
+        margin-top: 0.3rem;
+        align-items: center;
+
+        * {
+          cursor: pointer;
+          margin-right: 0.5rem;
+          color: $color-grey-light-2;
+        }
+
+        &-timestamp {
+          font-size: 0.8rem;
+        }
+
+        &-action {
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &--reply {
+      margin-top: 0.8rem;
+
+      width: 85%;
+      margin: 0.8rem auto 0rem 4rem;
+    }
+
+    &-post-image {
+      margin: 1rem 0;
+      width: 11rem;
+      height: 14rem;
+      border-radius: 1.3rem;
+      overflow: hidden;
+    }
+
+    &-replies {
+      cursor: pointer;
+      display: inline-flex;
+      display: -webkit-inline-flex;
+      max-width: 80%;
+      margin-left: 4rem;
+      margin-top: 1rem;
+      align-items: center;
+
+      &-count,
+      &-name,
+      span {
+        font-size: 0.8rem;
+      }
+
+      span {
+        margin-right: 0.3rem;
+      }
+
+      &-image {
+        margin-right: 0.5rem;
+      }
+
+      &-name {
+        font-weight: bold;
+        margin-right: 0.3rem;
+      }
+
+      &-count {
+        color: $color-grey-med;
+        margin-left: 0.3rem;
+      }
+    }
+
+    // Edit post dropdown selection
+    &-edit-list {
+      position: absolute;
+      cursor: pointer;
+      left: 10.8rem;
+      margin-top: 1rem;
+      background: #fff;
+      list-style-type: none;
+      display: flex;
+      display: inline-flex;
+      box-shadow: $drop-shadow;
+      border-radius: 3px;
+      z-index: 100;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        background: #fff;
+      }
+
+      &::after {
+        right: 4.1rem;
+        top: -0.3rem;
+        height: 1.4rem;
+        width: 1.4rem;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        height: 0.8rem;
+        width: 0.8rem;
+        bottom: 0;
+        left: 4.3rem;
+      }
+    }
+
+    &-edit-item {
+      font-weight: bold;
+      color: $color-grey-dark;
+      padding: 0.8rem 1.2rem;
+
+      &:first-child {
+        border-right: 1px solid $color-grey;
+      }
+    }
+
+    &-edit-form {
+      background: $color-grey-light;
+      padding: 0.5rem;
+      width: 85%;
+      margin-left: 4rem;
+
+      &--input {
+        width: 100%;
+        height: 7rem;
+        resize: none;
+        background: $color-grey-light;
+        padding: 0.2rem;
+        font-size: 1rem;
+        outline: none;
+      }
+    }
+
+    &-edit-btn {
+      display: flex;
+      margin-top: 0.3rem;
+
+      button,
+      div {
+        cursor: pointer;
+        padding: 0.4rem 0.6rem;
+        font-weight: bold;
+        color: $color-grey-dark;
+        border-radius: 3px;
+        font-size: 0.7rem;
+        border: 1px solid $color-grey-med;
+        outline: none;
+        background: #fff;
+      }
+
+      :first-child {
+        margin-right: auto;
+      }
+
+      :nth-child(2) {
+        background: $color-primary-blue-light-2;
+        color: #fff;
+        border: none;
+      }
+
+      :last-child {
+        margin-left: 0.4rem;
+      }
+    }
+
+    &-text-active {
+      color: $color-primary-blue-light;
+    }
+  }
+
+  &__delete-confirm {
+    border-radius: 5px;
+    border: 1px solid $color-grey;
+    padding: 0.6rem;
+
+    p:first-child {
+      font-size: 0.9rem;
+      color: $color-grey-dark;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+// Colors
+$color-primary-blue: #576b95;
+$color-primary-blue-med: #5b93fc;
+$color-primary-blue-med-2: #7596c8;
+$color-primary-blue-med-3: #3578e5;
+$color-primary-blue-med-4: #4267b2;
+$color-primary-blue-med-5: #3578e5;
+$color-primary-blue-light: #638ee9;
+$color-primary-blue-light-2: #4080ff;
+$color-primary-blue-light-3: #9fabd5;
+$color-primary-blue-light-4: #0084ff;
+$color-primary-blue-dark: #37455f;
+
+$login-btn: #1877f2;
+
+$color-grey: #ccd0d5;
+$color-grey-light: #ebedf0;
+$color-grey-light-2: #8d949e;
+$color-grey-light-3: #e9ebee;
+$color-grey-med: #90949c;
+$color-grey-med-2: #606770;
+$color-grey-dark: #444950;
+
+$color-red: #d65f5f;
+$color-red-2: #cf4949;
+$color-red-dark: #da2929;
+
+$login-background: #eceff5;
+
+$color-green: #95c27a;
+$color-green-med: #00a400;
+
+$background-color: #dadde1;
+
+// Drop Shadow
+$drop-shadow: 1px 1px 13px -2px #000000;
+
+*::before,
+*::after,
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  max-height: auto;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 100%;
+  line-height: 1.5;
+  background-color: $background-color;
+  position: relative;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.main-wrapper {
+  display: grid;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  padding: 1rem;
+}
